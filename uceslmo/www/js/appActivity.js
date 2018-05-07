@@ -68,7 +68,7 @@ function showPosition(position){
 // and a variable that will hold the layer itself – we need to do this outside the function so that we can use it to remove the layer later on
 var questionpointslayer;
 
-// create the code to get the Earthquakes data using an XMLHttpRequest
+// create the code to get the questions data using an XMLHttpRequest
 function getQuestionPoints() {
 	client = new XMLHttpRequest();
 
@@ -103,10 +103,10 @@ function loadQuestionPointslayer(questionpointsdata) {
 				// look at the GeoJSON file - specifically at the properties - to see the earthquake magnitude and use a different marker depending on this value
 				// also include a pop-up that shows the place value of the earthquakes
 				
-				L.marker(latlng, {icon:testMarkerPink}).bindPopup("<b>"+feature.properties.place +"</b>");
+				L.marker(latlng, {icon:testMarkerPink}).bindPopup("<p>question form here</p>");
 				
 			},
-		}).addTo(mymap);
+		}).addTo(mymap); //consider use of openOn rather than addto for usability
 	mymap.fitBounds(questionpointslayer.getBounds());
 }
 
