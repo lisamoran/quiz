@@ -73,7 +73,7 @@ function getQuestionPoints() {
 	client = new XMLHttpRequest();
 
 //client.open('GET','https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson');
-client.open('GET','http://developer.cege.ucl.ac.uk:30267/getPOI');
+client.open('GET','http://developer.cege.ucl.ac.uk:30267/getGeoJSON/quizform/geom');
 	client.onreadystatechange = questionPointsResponse; // note don't use earthquakeResponse() with brackets as that doesn't work
 	client.send();
 }
@@ -100,14 +100,12 @@ function loadQuestionPointslayer(questionpointsdata) {
 			// use point to layer to create the points
 			pointToLayer: function (feature, latlng)
 			{
-				// look at the GeoJSON file - specifically at the properties - to see the earthquake magnitude and use a different marker depending on this value
 				// also include a pop-up that shows the place value of the earthquakes
-				
 				L.marker(latlng, {icon:testMarkerPink}).bindPopup("<p>question form here</p>");
 				
 			},
 		}).addTo(mymap); //consider use of openOn rather than addto for usability
-	mymap.fitBounds(questionpointslayer.getBounds());
+	//mymap.fitBounds(questionpointslayer.getBounds());
 }
 
 
