@@ -99,11 +99,10 @@
           <img src="images/user.jpg" class="demo-avatar">
         </header>-->
         <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a>
           <a class="mdl-navigation__link" href=""onclick='getQuestionPoints();return false;'><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">report</i>Get Question Points</a>
           <a class="mdl-navigation__link" href=""onclick='trackLocation();return false;'><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">flag</i>Track User Location</a>
           <div class="mdl-layout-spacer"></div>
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i><span class="visuallyhidden">Help</span></a>
+          <a class="mdl-navigation__link" href="./quizUserGuide.html"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i><span class="visuallyhidden">Help</span></a>
         </nav>
       </div>
       <main class="mdl-layout__content mdl-color--grey-100">
@@ -116,6 +115,22 @@
 		  For example: congratulations you are correct!
 		  </div>-->
           </div>
+        </div>
+		<div class="demo-cards mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
+		<div class="demo-options mdl-card mdl-color--deep-purple-500 mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet mdl-cell--12-col-desktop">
+		  <div class="mdl-card__supporting-text mdl-color-text--blue-grey-50">
+			<h3>Quiz Questions</h3>
+			<ul>
+			  <p>Question?</p>
+				Answer1: <input type="radio" name="amorpm" id="answer1" /><br />
+				Answer2: <input type="radio" name="amorpm" id ="answer2"/><br />
+				Answer3: <input type="radio" name="amorpm" id="answer3" /><br />
+				Answer4: <input type="radio" name="amorpm" id ="answer4"/><br />
+				<button id="checkAnswer" onclick="checkAnswer()">Check if you are correct!</button>
+				<div id="dataUploadResult">The result goes here</div>
+			</ul>
+		  </div>
+		</div>
         </div>
       </main>
 	  <script src="./js/appActivity.js"></script>
