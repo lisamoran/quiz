@@ -39,10 +39,11 @@ function trackLocation(){
 
 // display the position of the user with a popup and add to the map
 function showPosition(position){
-	
-	L.marker([position.coords.latitude, position.coords.longitude]).addTo(mymap)
+			//custom marker pink
+	L.marker([position.coords.latitude, position.coords.longitude], {icon: testMarkerPink}).addTo(mymap)
 		.bindPopup("<b>You were at "+ position.coords.longitude + " "+position.coords.latitude+"!</b>");
-	mymap.setView([position.coords.latitude, position.coords.longitude], 13);		
+	mymap.setView([position.coords.latitude, position.coords.longitude], 13);
+
 }
 //document.getElementById('mapid').innerHTML="L.marker(latlng, {icon:testMarkerPink}).addTo(mymap).bindPopup("<b>"position.coords"</b>");"
 
